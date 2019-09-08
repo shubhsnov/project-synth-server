@@ -1,0 +1,33 @@
+{
+  "name": "judgement-game-server",
+  "version": "1.0.0",
+  "description": "The game engine server for the judgement card game",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && babel src -d build",
+    "start": "nodemon index.js --exec babel-node --presets babel-preset-env"
+  },
+  "engines": {
+    "node": "8.9.1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@colyseus/monitor": "^0.11.0",
+    "colyseus": "^0.11.0",
+    "colyseus.js": "^0.11.0",
+    "cors": "^2.8.5",
+    "express": "^4.14.0",
+    "serve-index": "^1.8.0",
+    "superagent": "^3.8.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "browserify": "^14.4.0",
+    "nodemon": "^1.19.2"
+  }
+}
